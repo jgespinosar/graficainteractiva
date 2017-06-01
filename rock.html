@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<!--página de inicio-->
+<head>
+   <meta charset="UTF-8">
+   <link rel= "stylesheet" href="estilo.css"/>
+   <link type="text/css" rel="stylesheet" href="featherlight.css" />
+   <style type="text/css">
+   a {color:black; text-decoration:none}
+   </style>
+   <script src="js/jquery-1.7.0.min.js"></script>
+    <script src="js/featherlight.js" type="text/javascript" charset="utf-8"></script>
+   <title>lml lml</title>
+</head>
+
+<body>
+    
+
+    <img src="imagenes/canvas.png" alt="" usemap="#Map" />
+    <img id="felicidades" src="imagenes/felicidades.png" alt="" >
+      
+    
+    <map name="Map" id="Map">
+          <area onclick="contador();img_u2();" data-featherlight="image" href="imagenes/U2.png" alt="" title=""  shape="rect" coords="1016,383,1044,400" />
+          <img id="u2" src="imagenes/encontrado.png" />
+          <area onclick="contador();img_dp();" data-featherlight="image" href="imagenes/Deeppurple.png" alt="" title="" href="#" shape="rect" coords="709,369,738,396" />
+          <img id="deeppurple" src="imagenes/encontrado.png" />
+          <area onclick="contador();img_rh();" data-featherlight="image" href="imagenes/Radiohead.png" alt="" title="" href="#" shape="rect" coords="822,442,851,475" />
+          <img id="radiohead" src="imagenes/encontrado.png" />
+          <area onclick="contador();img_gd();"  data-featherlight="image" href="imagenes/Greenday.png" alt="" title="" href="#" shape="rect" coords="1199,700,1211,722" />
+          <img id="greenday" src="imagenes/encontrado.png" />
+          <area onclick="contador();img_bf();" data-featherlight="image" href="imagenes/Blackflag.png" alt="" title="" href="#" shape="rect" coords="934,341,973,392" />
+          <img id="blackflag" src="imagenes/encontrado.png" />
+          <area  id="instrucciones" alt="" title="" href="#" onclick="mostrar_instrucciones()" shape="rect" coords="31,80,297,146" />
+<p id="texto"></p>
+  
+    </map>
+   
+<script type="text/javascript">
+var ganador = 0;      
+function mostrar_instrucciones() {
+   document.getElementById("texto").innerHTML = "Esta imagen esconde el nombre de varias bandas de rock clásicas, pero hay 5 que están mucho más ocultas. La idea es encontrarlas y hacer clic sobre el elemento que las identifique. Pista: El zeppelin sería Led Zeppelin";
+}
+function contador() {
+
+   if ( ganador == 4 ) {
+    var est6 = document.getElementById("felicidades");
+    est6.style.visibility = "visible";
+   }
+   
+}
+function img_dp() {
+    var est1 = document.getElementById("deeppurple");
+    est1.style.visibility = "visible";
+    ganador += 1;           
+}
+function img_rh() {
+    var est2 = document.getElementById("radiohead");
+    est2.style.visibility = "visible";
+    ganador += 1;                     
+}
+function img_gd() {
+    var est3 = document.getElementById("greenday");
+    est3.style.visibility = "visible";
+    ganador += 1;                    
+}
+function img_bf() {
+    var est4 = document.getElementById("blackflag");
+    est4.style.visibility = "visible";
+    ganador += 1;                      
+}
+function img_u2() {
+    var est5 = document.getElementById("u2");
+    est5.style.visibility = "visible";
+    ganador += 1;                      
+}
+</script>
+</body>
+    
+    
+    
+    
+</html>
+    
